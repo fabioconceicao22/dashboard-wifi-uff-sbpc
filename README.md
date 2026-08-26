@@ -21,8 +21,8 @@ Dashboard analítico para acompanhar utilização, capacidade e qualidade da red
 app.py                         interface e visualizações Streamlit
 services/parser_fortianalyzer.py  ingestão, normalização e anonimização
 services/relatorio_pdf.py      relatório executivo em PDF
-scripts/generate_demo_data.py  gerador da base pública sintética
-data/demo/                     única base publicada no GitHub
+scripts/generate_demo_data.py  gerador da base pública sintética em memória
+data/                          diretórios locais protegidos pelo .gitignore
 tests/                         testes de privacidade e parsing
 ```
 

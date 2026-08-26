@@ -7,7 +7,7 @@
 3. Informe `app.py` como arquivo principal.
 4. Faça o deploy.
 
-A aplicação utilizará automaticamente `data/demo/wifi_demo.csv.gz`. Essa base é sintética e pode ser publicada com segurança.
+A aplicação gera automaticamente uma base sintética em memória quando não encontra um histórico local. Nenhum arquivo de dados é necessário no repositório público.
 
 ## Ambiente operacional
 
