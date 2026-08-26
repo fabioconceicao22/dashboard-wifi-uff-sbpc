@@ -41,6 +41,21 @@ data/                          diretórios locais protegidos pelo .gitignore
 tests/                         testes de privacidade e parsing
 ```
 
+```mermaid
+flowchart LR
+    A[CSV / CSV.GZ<br/>FortiAnalyzer] --> B[Validação e parsing]
+    B --> C{Arquivo válido?}
+    C -->|Não| D[data/rejeitados]
+    C -->|Sim| E[Normalização e anonimização]
+    E --> F[Deduplicação e manifesto]
+    F --> G[(Histórico protegido)]
+    G --> H[Dashboard Streamlit]
+    I[Dados sintéticos<br/>demonstração pública] --> H
+    H --> J[Indicadores e gráficos]
+    H --> K[Relatório executivo PDF]
+    H --> L[CSV agregado]
+```
+
 ## 🚀 Como executar
 
 ```bash
