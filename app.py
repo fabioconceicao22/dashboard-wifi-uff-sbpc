@@ -9,12 +9,11 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from config_ssids import SSIDS_INSTITUCIONAIS
-from services.relatorio_pdf import gerar_relatorio_pdf
 from services.parser_fortianalyzer import (
     carregar_historico,
     importar_novos_arquivos,
 )
-
+from services.relatorio_pdf import gerar_relatorio_pdf
 
 st.set_page_config(
     page_title="Observatório Wi-Fi UFF | SBPC",

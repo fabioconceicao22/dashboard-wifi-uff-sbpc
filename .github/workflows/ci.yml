@@ -16,5 +16,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements-dev.txt
       - run: python -m py_compile app.py services/*.py scripts/*.py
-      - run: pytest -q
+      - run: python -m pytest -q
+        env:
+          PYTHONPATH: .
 

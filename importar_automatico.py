@@ -3,7 +3,6 @@ from pathlib import Path
 
 from services.parser_fortianalyzer import importar_novos_arquivos
 
-
 LOG_DIR = Path("logs")
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 LOG_FILE = LOG_DIR / "importacao_automatica.log"
