@@ -1,10 +1,25 @@
-# Observatório Wi-Fi UFF · SBPC
+<div align="center">
 
-Dashboard analítico para acompanhar utilização, capacidade e qualidade da rede Wi-Fi institucional durante eventos de grande porte. O projeto transforma exportações do FortiAnalyzer em indicadores operacionais, análises temporais e relatórios executivos em PDF.
+# 📡 Observatório Wi-Fi UFF · SBPC
+
+### Análise de utilização, capacidade e qualidade da rede em eventos de grande porte.
+
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-dashboard-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![CI](https://github.com/fabioconceicao22/dashboard-wifi-uff-sbpc/actions/workflows/ci.yml/badge.svg)](https://github.com/fabioconceicao22/dashboard-wifi-uff-sbpc/actions/workflows/ci.yml)
+[![Dados](https://img.shields.io/badge/Dados-sint%C3%A9ticos-0F766E?logo=databricks&logoColor=white)](#dados-e-lgpd)
+[![Privacidade](https://img.shields.io/badge/Privacidade-LGPD-2563EB?logo=securityscorecard&logoColor=white)](#dados-e-lgpd)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+</div>
+
+## Sobre o projeto
+
+O **Observatório Wi-Fi UFF · SBPC** transforma exportações do FortiAnalyzer em indicadores operacionais, análises temporais e relatórios executivos em PDF.
 
 > A demonstração pública utiliza somente dados sintéticos. Nenhuma métrica deste repositório representa resultado oficial da UFF ou da SBPC.
 
-## Principais recursos
+## ✨ Principais recursos
 
 - visão executiva de clientes, pico de utilização, SSID e ponto de acesso líder;
 - filtros por período, SSID, granularidade e escopo de análise;
@@ -15,7 +30,7 @@ Dashboard analítico para acompanhar utilização, capacidade e qualidade da red
 - base sintética reprodutível para demonstração e portfólio;
 - testes automatizados e integração contínua com GitHub Actions.
 
-## Arquitetura
+## 🏗 Arquitetura
 
 ```text
 app.py                         interface e visualizações Streamlit
@@ -26,7 +41,7 @@ data/                          diretórios locais protegidos pelo .gitignore
 tests/                         testes de privacidade e parsing
 ```
 
-## Executar localmente
+## 🚀 Como executar
 
 ```bash
 python -m venv .venv
@@ -39,7 +54,7 @@ streamlit run app.py
 
 Acesse `http://localhost:8501`.
 
-## Importar logs reais com segurança
+## 🔐 Importar logs reais com segurança
 
 1. Defina um segredo privado e estável com pelo menos 16 caracteres:
 
@@ -61,19 +76,19 @@ Se o mês solicitado não existir no arquivo, o comando termina sem substituir o
 
 O segredo não deve ser trocado entre importações do mesmo histórico, pois ele garante identificadores anônimos consistentes. Nunca o envie ao GitHub.
 
-## Dados e LGPD
+## 🛡 Dados e LGPD
 
 O parser descarta o endereço MAC original e o endereço IP. Apenas um identificador derivado por hash com segredo privado é persistido. Mesmo assim, o histórico operacional deve permanecer em infraestrutura autorizada pela UFF e nunca em repositório público.
 
-## Deploy
+## ☁️ Deploy
 
 O Streamlit Community Cloud é indicado para esta demonstração sintética. Para uso operacional, recomenda-se execução em ambiente institucional com armazenamento persistente e acesso controlado ao FortiAnalyzer.
 
-## Tecnologias
+## 🧰 Tecnologias
 
 Python, Streamlit, Pandas, Plotly, Matplotlib, ReportLab, Pytest e GitHub Actions.
 
-## Autor
+## 👤 Autor
 
-Projeto de portfólio de [Fabio Conceição](https://github.com/fabioconceicao22), desenvolvido a partir de uma experiência de análise do uso de Wi-Fi durante a SBPC na Universidade Federal Fluminense.
+Projeto de portfólio de **Fabio Leite** · [GitHub](https://github.com/fabioconceicao22) · [LinkedIn](https://www.linkedin.com/in/fabio-concei%C3%A7%C3%A3o95/), desenvolvido a partir de uma experiência de análise do uso de Wi-Fi durante a SBPC na Universidade Federal Fluminense.
 
